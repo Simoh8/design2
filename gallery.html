@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery - ProMind Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body style="opacity: 1; visibility: visible;">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ProMind<span class="accent-text">Group</span></h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#team" class="nav-link">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-cta">
+                <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">Our <span class="title-highlight">Gallery</span></h1>
+                <p class="hero-subtitle">Showcasing our successful campaigns and memorable moments</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Gallery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter Section -->
+    <section class="gallery-filter-section">
+        <div class="container">
+            <div class="filter-tabs" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="promotions">Promotions</button>
+                <button class="filter-btn" data-filter="roadshows">Road Shows</button>
+                <button class="filter-btn" data-filter="activations">Activations</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                
+                <!-- Fuliza Activation -->
+                <div class="gallery-item" data-category="activations" data-aos="fade-up">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Fuliza Activation</h3>
+                                <p>Mobile money service promotion</p>
+                                <button class="view-btn" data-gallery="fuliza">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Masoko by Safaricom -->
+                <div class="gallery-item" data-category="promotions" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Masoko by Safaricom</h3>
+                                <p>E-commerce platform promotions</p>
+                                <button class="view-btn" data-gallery="masoko">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kochokocho - Safaricom -->
+                <div class="gallery-item" data-category="promotions" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Kochokocho - Safaricom</h3>
+                                <p>Customer loyalty promotion</p>
+                                <button class="view-btn" data-gallery="kochokocho">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivea Promotion -->
+                <div class="gallery-item" data-category="promotions" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Nivea Promotion</h3>
+                                <p>Skincare product activation</p>
+                                <button class="view-btn" data-gallery="nivea">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Durex Promotion -->
+                <div class="gallery-item" data-category="promotions" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Durex Promotion</h3>
+                                <p>Health awareness campaign</p>
+                                <button class="view-btn" data-gallery="durex">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Road Shows -->
+                <div class="gallery-item" data-category="roadshows" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Road Shows</h3>
+                                <p>Mobile marketing campaigns</p>
+                                <button class="view-btn" data-gallery="roadshows">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reckitt -->
+                <div class="gallery-item" data-category="promotions" data-aos="fade-up" data-aos-delay="600">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-spray-can"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Reckitt</h3>
+                                <p>Consumer goods promotion</p>
+                                <button class="view-btn" data-gallery="reckitt">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simtank Promotion -->
+                <div class="gallery-item" data-category="promotions" data-aos="fade-up" data-aos-delay="700">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Simtank Promotion</h3>
+                                <p>Water storage solutions</p>
+                                <button class="view-btn" data-gallery="simtank">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DSTV Activation -->
+                <div class="gallery-item" data-category="activations" data-aos="fade-up" data-aos-delay="800">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>DSTV Activation</h3>
+                                <p>Entertainment platform promotion</p>
+                                <button class="view-btn" data-gallery="dstv">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M-Pesa Campaign -->
+                <div class="gallery-item" data-category="activations" data-aos="fade-up" data-aos-delay="900">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>M-Pesa Campaign</h3>
+                                <p>Mobile money activation</p>
+                                <button class="view-btn" data-gallery="mpesa">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Events -->
+                <div class="gallery-item" data-category="events" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Corporate Events</h3>
+                                <p>Professional event management</p>
+                                <button class="view-btn" data-gallery="events">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Street Activations -->
+                <div class="gallery-item" data-category="activations" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>Street Activations</h3>
+                                <p>Community engagement campaigns</p>
+                                <button class="view-btn" data-gallery="street">
+                                    <i class="fas fa-eye"></i> View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <div class="lightbox-content">
+            <div class="lightbox-header">
+                <h3 id="lightbox-title">Gallery Title</h3>
+                <button class="lightbox-close" id="lightbox-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="lightbox-body">
+                <div class="lightbox-image-container">
+                    <button class="lightbox-nav prev" id="lightbox-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="lightbox-image">
+                        <div class="image-placeholder-large">
+                            <i class="fas fa-image"></i>
+                            <p>Image placeholder - In a real implementation, this would show actual campaign photos</p>
+                        </div>
+                    </div>
+                    <button class="lightbox-nav next" id="lightbox-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="lightbox-info">
+                    <p id="lightbox-description">Campaign description and details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>ProMind<span class="accent-text">Group</span></h3>
+                        <p>Transforming brands through innovative experiential marketing solutions.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Promotions</a></li>
+                        <li><a href="index.html#services">Road Shows</a></li>
+                        <li><a href="index.html#services">Event Management</a></li>
+                        <li><a href="index.html#services">Street Activation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@promindgroup.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProMind Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="gallery.js"></script>
+
+</body>
+</html>
