@@ -46,7 +46,6 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    console.log('Navigation elements:', { navbar, navToggle, navMenu, navLinks: navLinks.length });
     
     // Scroll effect for navbar
     let lastScrollY = window.scrollY;
@@ -79,7 +78,6 @@ function initNavigation() {
             e.stopPropagation();
             
             const isActive = navMenu.classList.contains('active');
-            console.log('Menu currently active:', isActive);
             
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
@@ -87,10 +85,8 @@ function initNavigation() {
             // Prevent body scroll when menu is open
             if (navMenu.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
-                console.log('Menu opened');
             } else {
                 document.body.style.overflow = '';
-                console.log('Menu closed');
             }
         });
         
