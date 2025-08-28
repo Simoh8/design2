@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 :root {
     --primary-color: #6366f1;
     --secondary-color: #8b5cf6;
@@ -56,6 +63,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -64,16 +73,22 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     opacity: 1;
     visibility: visible;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .accent-text {
@@ -87,12 +102,15 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    max-width: 100vw;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-light);
     z-index: 1003;
     transition: all var(--transition-base);
+    box-sizing: border-box;
 }
 
 .navbar.scrolled {
@@ -107,6 +125,8 @@ body {
     padding: var(--spacing-lg) var(--spacing-xl);
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-logo h2 {
@@ -233,6 +253,9 @@ body {
     overflow: hidden;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     padding-top: 140px;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .hero-background {
@@ -414,6 +437,10 @@ body {
 section {
     padding: var(--spacing-3xl) 0;
     position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .section-header {
@@ -1066,11 +1093,22 @@ section {
 
 /* Tablets */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-md);
+        max-width: 100%;
+    }
+    
+    .nav-container {
+        padding: var(--spacing-md) var(--spacing-lg);
+        max-width: 100%;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 100%;
         left: 0;
         width: 100%;
+        max-width: 100vw;
         background: var(--bg-card);
         flex-direction: column;
         padding: var(--spacing-2xl);
@@ -1083,6 +1121,7 @@ section {
         z-index: 1002;
         max-height: calc(100vh - 70px);
         overflow-y: auto;
+        box-sizing: border-box;
     }
     
     .nav-menu.active {
@@ -1255,11 +1294,15 @@ section {
 @media (max-width: 480px) {
     .container {
         padding: 0 var(--spacing-sm);
+        max-width: 100%;
+        width: 100%;
     }
     
     .nav-container {
-        padding: var(--spacing-md) var(--spacing-lg);
+        padding: var(--spacing-md) var(--spacing-md);
         min-height: 60px;
+        max-width: 100%;
+        width: 100%;
     }
     
     .nav-logo h2 {
@@ -1482,11 +1525,12 @@ section {
     .back-to-top {
         width: 56px;
         height: 56px;
-        bottom: var(--spacing-xl);
-        right: var(--spacing-xl);
+        bottom: var(--spacing-lg);
+        right: var(--spacing-lg);
         font-size: 1.2rem;
         z-index: 1001;
         box-shadow: var(--shadow-xl);
+        position: fixed;
     }
     
     .notification {
