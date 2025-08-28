@@ -187,6 +187,12 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
+    padding: var(--spacing-sm);
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+    z-index: 1004;
 }
 
 .hamburger-line {
@@ -195,6 +201,7 @@ body {
     background: var(--text-primary);
     transition: all var(--transition-base);
     border-radius: var(--radius-full);
+    display: block;
 }
 
 /* Buttons */
@@ -1592,6 +1599,7 @@ section {
     width: 50px;
     height: 50px;
     background: var(--gradient-primary);
+    border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1605,6 +1613,8 @@ section {
     transition: all var(--transition-base);
     z-index: 1000;
     box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    outline: none;
 }
 
 .back-to-top.visible {
@@ -1616,6 +1626,17 @@ section {
 .back-to-top:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
+    background: var(--gradient-primary);
+}
+
+.back-to-top:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+.back-to-top:active {
+    transform: translateY(-2px);
+    background: var(--gradient-primary);
 }
 
 /* Notification */
