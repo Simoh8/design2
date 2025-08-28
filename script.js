@@ -46,6 +46,8 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     
+    console.log('Navigation elements:', { navbar, navToggle, navMenu, navLinks: navLinks.length });
+    
     // Scroll effect for navbar
     let lastScrollY = window.scrollY;
     
@@ -70,17 +72,25 @@ function initNavigation() {
     
     // Mobile menu toggle
     if (navToggle && navMenu) {
+        console.log('Setting up mobile menu toggle');
         navToggle.addEventListener('click', (e) => {
+            console.log('Hamburger clicked!');
             e.preventDefault();
             e.stopPropagation();
+            
+            const isActive = navMenu.classList.contains('active');
+            console.log('Menu currently active:', isActive);
+            
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
             
             // Prevent body scroll when menu is open
             if (navMenu.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
+                console.log('Menu opened');
             } else {
                 document.body.style.overflow = '';
+                console.log('Menu closed');
             }
         });
         
@@ -92,6 +102,8 @@ function initNavigation() {
                 document.body.style.overflow = '';
             }
         });
+    } else {
+        console.log('Mobile menu elements not found:', { navToggle, navMenu });
     }
     
     // Smooth scrolling for navigation links
@@ -503,6 +515,29 @@ window.addEventListener('scroll', () => {
         element.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
     });
 });
+
+// Simple mobile menu toggle function
+function toggleMobileMenu() {
+    console.log('toggleMobileMenu called');
+    const navToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+            console.log('Menu opened via inline handler');
+        } else {
+            document.body.style.overflow = '';
+            console.log('Menu closed via inline handler');
+        }
+    } else {
+        console.log('Elements not found in toggleMobileMenu');
+    }
+}
 
 // Initialize everything when DOM is ready
 if (document.readyState === 'loading') {

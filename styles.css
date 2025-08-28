@@ -1112,7 +1112,7 @@ section {
     
     .nav-menu {
         position: fixed;
-        top: 100%;
+        top: 70px;
         left: 0;
         width: 100%;
         max-width: 100vw;
@@ -1124,7 +1124,7 @@ section {
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        transition: all var(--transition-base);
+        transition: all 0.3s ease;
         z-index: 1002;
         max-height: calc(100vh - 70px);
         overflow-y: auto;
