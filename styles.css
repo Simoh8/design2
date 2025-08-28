@@ -91,7 +91,7 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-light);
-    z-index: 1000;
+    z-index: 1003;
     transition: all var(--transition-base);
 }
 
@@ -1080,7 +1080,7 @@ section {
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-base);
-        z-index: 999;
+        z-index: 1002;
         max-height: calc(100vh - 80px);
         overflow-y: auto;
     }
@@ -1457,9 +1457,10 @@ section {
     .back-to-top {
         width: 45px;
         height: 45px;
-        bottom: var(--spacing-md);
-        right: var(--spacing-md);
+        bottom: var(--spacing-lg);
+        right: var(--spacing-lg);
         font-size: 1rem;
+        z-index: 1001;
     }
     
     .notification {
